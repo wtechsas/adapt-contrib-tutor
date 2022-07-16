@@ -1,0 +1,95 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "globals": {
+    "hideFeedback": {
+      "type": "string",
+      "default": "Ocultar retroalimentación",
+      "title": "Ocultar retroalimentación",
+      "inputType": "Text",
+      "translatable": true
+    }
+  },
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "properties": {
+        "component": {
+          "type": "object",
+          "properties": {
+            "_tutor": {
+              "type": "object",
+              "legend": "Tutor",
+              "properties": {
+                "_type": {
+                  "type": "string",
+                  "default": "notify",
+                  "title": "Tipo",
+                  "inputType": {
+                    "type": "Select",
+                    "options": [
+                      {
+                        "val": "notify",
+                        "label": "Notificación"
+                      },
+                      {
+                        "val": "inline",
+                        "label": "En línea"
+                      },
+                      {
+                        "val": "overlay",
+                        "label": "superposición"
+                      },
+                      {
+                        "val": "none",
+                        "label": "ninguno"
+                      }
+                    ]
+                  },
+                  "help": "Tipo de visualización de retroalimentaciones de preguntas"
+                },
+                "_classes": {
+                  "type": "string",
+                  "default": "",
+                  "title": "Clases",
+                  "help": "Clases de retroalimentaciónes de preguntas",
+                  "inputType": "Text"
+                },
+                "_hasNotifyBottomButton": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "Habilitar el botón inferior de notificación",
+                  "inputType": "Checkbox",
+                  "help": "Si está deshabilitado y es de tipo notificación, se mostrará el icono de cierre predeterminado"
+                },
+                "_button": {
+                  "type": "object",
+                  "title": "Botón cerrar",
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "default": "{{_globals._extensions._tutor.hideFeedback}}",
+                      "title": "Texto",
+                      "inputType": "Text",
+                      "translatable": true,
+                      "help": "Para botones de notificación y retroalimentación en línea. La superposición siempre mostrará una X."
+                    },
+                    "ariaLabel": {
+                      "type": "string",
+                      "default": "{{_globals._extensions._tutor.hideFeedback}}",
+                      "title": "Etiqueta ARIA",
+                      "inputType": "Text",
+                      "translatable": true,
+                      "help": "Para el botón en línea y el botón de cierre superpuesto. Notify siempre leerá el texto."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

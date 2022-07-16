@@ -1,0 +1,17 @@
+{
+  "name": "adapt-contrib-tutor",
+  "version": "10.0.0",
+  "framework": ">=5.18",
+  "homepage": "https://github.com/wtechsas/adapt-contrib-tutor",
+  "bugs": "https://github.com/wtechsas/adapt-contrib-tutor/issues",
+  "extension" : "tutor",
+  "displayName" : "Tutor",
+  "description": "Una extensión que proporciona una retroalimentación para los componentes de preguntas",
+  "main": "/js/adapt-contrib-tutor.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPL-3.0",
+  "targetAttribute": "_tutor"
+}
