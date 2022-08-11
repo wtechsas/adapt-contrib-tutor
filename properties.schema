@@ -65,7 +65,7 @@
                 },
                 "_button": {
                   "type": "object",
-                  "title": "Botón cerrar",
+                  "title": "Texto botón cerrar",
                   "properties": {
                     "text": {
                       "type": "string",
@@ -73,7 +73,7 @@
                       "title": "Texto",
                       "inputType": "Text",
                       "translatable": true,
-                      "help": "Para botones de notificación y retroalimentación en línea. La superposición siempre mostrará una X."
+                      "help": "Este es el texto del botón de notificación y retroalimentación."
                     },
                     "ariaLabel": {
                       "type": "string",
@@ -81,7 +81,7 @@
                       "title": "Etiqueta ARIA",
                       "inputType": "Text",
                       "translatable": true,
-                      "help": "Para el botón en línea y el botón de cierre superpuesto. Notify siempre leerá el texto."
+                      "help": "Este es el texto que lee el lector de pantalla cuando pasa por el botón."
                     }
                   }
                 }
